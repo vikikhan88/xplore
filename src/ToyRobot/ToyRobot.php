@@ -60,7 +60,7 @@ class ToyRobot{
         $this->turn('RIGHT');
     }
 
-    # Bot current location
+    # Bot current location or updated location
     public function report() {
         return "OutPut: {$this->x}, {$this->y}, {$this->facing}";
     }
@@ -78,5 +78,34 @@ class ToyRobot{
         }
 
         $this->facing = self::DIRECTIONS[$newIdx];
+    }
+
+    public function commandParsing($instructions){
+
+        $commands = preg_split("/\r\n|\n|\r/", $instructions);
+        foreach($commands as $command){
+            if(!empty(trim($command))){
+                $cmd = strtoupper($command);
+                switch ($cmd) {
+                    case str_contains($cmd, 'PLACE') == true:
+                        $statement = explode(" ", $cmd);
+                        $arg = explode(",", $statement[1]);
+                        $this->place($arg[0],$arg[1], $arg[2]);
+                        break;
+                    case 'LEFT':
+                        $this->left();
+                        break;
+                    case 'RIGHT':
+                        $this->right();
+                        break;
+                    case 'MOVE':
+                        $this->move();
+                        break;
+                    case 'REPORT':
+                        return $this->report();
+                        break;
+                }
+            }
+        }
     }
 }
