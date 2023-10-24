@@ -1,0 +1,19 @@
+{
+    "name": "vendor/toyrobot",
+    "description": "created by waqas",
+    "type": "library",
+    "license": "123456789",
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Toyrobot\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Waqas Khan"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "10"
+    }
+}

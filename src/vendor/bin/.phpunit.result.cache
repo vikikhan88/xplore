@@ -1,0 +1,1 @@
+{"version":1,"defects":{"ToyRobotTest::testPlace":8,"ToyRobotTest::testMove":8,"ToyRobotTest::testLeft":8,"ToyRobotTest::testRight":8,"ToyRobotTest::testInvalidPlacement":8},"times":{"ToyRobotTest::testPlace":0.047,"ToyRobotTest::testMove":0,"ToyRobotTest::testLeft":0,"ToyRobotTest::testRight":0,"ToyRobotTest::testInvalidPlacement":0}}
