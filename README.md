@@ -13,4 +13,5 @@ Setting up environment with Docker using the stack that includes: Nginx, PHP.
 ## How to Run the TestCases
 
 1. ``` cd ./src/```
-2. ``` ./vendor/bin/phpunit ./unitTest/ToyRobotTest.php```
+2. run this command
+``` ./vendor/bin/phpunit ./unitTest/ToyRobotTest.php```
